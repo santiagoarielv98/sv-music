@@ -5,6 +5,7 @@
 
 
 html {
+  color-scheme: light dark;
   @include mat.theme(
     (
       color: (
@@ -16,4 +17,8 @@ html {
       density: 0,
     )
   );
+
+  @media (prefers-contrast: more) {
+    @include my-theme.high-contrast-overrides(color-scheme);
+  }
 }
