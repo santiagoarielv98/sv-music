@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule],
   templateUrl: './music-card.component.html',
-  styleUrl: './music-card.component.css',
+  styleUrl: './music-card.component.scss',
 })
 export class MusicCardComponent {
   readonly item = input<any>();
