@@ -9,11 +9,6 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'search',
-    loadChildren: () =>
-      import('./features/search/search.routes').then((m) => m.SearchModule),
-  },
-  {
     path: 'library',
     loadComponent: () =>
       import(
