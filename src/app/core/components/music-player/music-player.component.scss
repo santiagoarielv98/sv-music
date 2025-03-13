@@ -1,10 +1,37 @@
 @use '@angular/material' as mat;
 
-
 .music-player {
     @include mat.toolbar-overrides((standard-height: 72px));
 }
 
 button[mat-icon-button] {
     @include mat.icon-button-overrides((state-layer-size: 32px));
+}
+
+.music-player-slider {
+    height: 32px;
+    @include mat.slider-overrides((handle-width: 16px, handle-height: 16px));
+}
+
+.volumen-player-slider {
+    height: 32px;
+    @include mat.slider-overrides((handle-width: 10px, handle-height: 10px));
+}
+
+::ng-deep .volumen-player-slider {
+    mat-slider-visual-thumb {
+        width: 5px;
+        height: 5px;
+        left: -4px;
+        top: 13px;
+    }
+}
+
+::ng-deep .music-player-slider {
+    mat-slider-visual-thumb {
+        width: 5px;
+        height: 5px;
+        left: -5px;
+        top: 12px;
+    }
 }
