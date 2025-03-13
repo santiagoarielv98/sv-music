@@ -1,7 +1,10 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>
+      <mat-icon>library_music</mat-icon>
+      <span>sv-Music</span>
+    </mat-toolbar>
     <mat-card style="flex: 1;">
       <mat-card-header>
         <mat-card-title>
@@ -61,7 +64,20 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       }
-      <span>sv-music</span>
+      <button mat-icon-button aria-label="Home">
+        <mat-icon>home</mat-icon>
+      </button>
+      <mat-form-field style="max-width: 400px; width: 100%;">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text" [(ngModel)]="value">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''"
+          [ngStyle]="{visibility: value ? 'visible' : 'hidden'}">
+          <mat-icon>close</mat-icon>
+        </button>
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>pageview</mat-icon>
+        </button>
+      </mat-form-field>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
