@@ -1,0 +1,63 @@
+/* Tarjeta de elementos musicales */
+.music-card {
+  border-radius: 8px;
+  padding: 16px;
+  transition: background-color 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  border-radius: 4px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 12px 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Botón de reproducción */
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin-top: auto;
+}
+
+/* Tarjetas de artistas */
+.artist-card .artist-image-container {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.artist-card .artist-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+mat-card-content {
+  flex-grow: 1;
+}
