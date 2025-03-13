@@ -1,0 +1,25 @@
+@use '@angular/material' as mat;
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 360px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.chip-set {
+  @include mat.chips-overrides((outline-color: transparent,
+      disabled-outline-color: red,
+    ));
+}
