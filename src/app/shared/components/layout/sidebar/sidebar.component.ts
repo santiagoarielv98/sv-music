@@ -13,6 +13,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { MusicPlayerComponent } from '../../../../core/components/music-player/music-player.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -33,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatChipsModule,
     AsyncPipe,
+    MusicPlayerComponent,
   ],
 })
 export class SidebarComponent {

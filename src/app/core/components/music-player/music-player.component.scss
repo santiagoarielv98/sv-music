@@ -1,0 +1,10 @@
+@use '@angular/material' as mat;
+
+
+.music-player {
+    @include mat.toolbar-overrides((standard-height: 72px));
+}
+
+button[mat-icon-button] {
+    @include mat.icon-button-overrides((state-layer-size: 32px));
+}

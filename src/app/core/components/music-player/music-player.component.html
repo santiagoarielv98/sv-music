@@ -1,0 +1,36 @@
+<mat-toolbar class="music-player" style="overflow: hidden;">
+    <div style="display: flex; height: 100%;width: 100%;">
+        <div style="width: 30%; background: #000;"></div>
+        <div style="width: 40%;">
+            <div style="display: flex; gap: 10px;">
+                <div style="display: flex; flex: 1; gap: 5px; justify-content: end;">
+                    <button mat-icon-button>
+                        <mat-icon>shuffle</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon>skip_previous</mat-icon>
+                    </button>
+                </div>
+                <button mat-icon-button>
+                    <mat-icon>play_arrow</mat-icon>
+                </button>
+                <div style="display: flex; flex: 1; gap: 5px;">
+                    <button mat-icon-button>
+                        <mat-icon>skip_next</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon>repeat</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <small>0:00</small>
+                <mat-slider style="width: 100%">
+                    <input matSliderThumb >
+                </mat-slider>
+                <small>0:00</small>
+            </div>
+        </div>
+        <div style="width: 30%; background: #000;"></div>
+    </div>
+</mat-toolbar>
