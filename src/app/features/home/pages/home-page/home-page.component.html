@@ -36,30 +36,29 @@
             }
         </div>
     </section>
-
+    
+    <!-- Sección de música para ti -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2>Creado para ti</h2>
+            <a class="view-all">Ver todo</a>
+        </div>
+        <div class="cards-container">
+            <app-music-card [item]="{
+                name: 'Mix Diario 1',
+                cover: 'https://picsum.photos/300',
+                description: 'Basado en tu actividad reciente'
+            }" type="playlist" />
+            <app-music-card [item]="{
+                name: 'Mix Diario 2',
+                cover: 'https://picsum.photos/300',
+                description: 'Canciones recomendadas para ti'
+            }" type="playlist" />
+            <app-music-card [item]="{
+                name: 'Mix Diario 3',
+                cover: 'https://picsum.photos/300',
+                description: 'Descubre nueva música'
+            }" type="playlist" />
+        </div>
+    </section>
 </div>
-
-<!-- Sección de música para ti -->
-<section class="content-section">
-    <div class="section-header">
-        <h2>Creado para ti</h2>
-        <a class="view-all">Ver todo</a>
-    </div>
-    <div class="cards-container">
-        <app-music-card [item]="{
-            name: 'Mix Diario 1',
-            cover: 'https://picsum.photos/300',
-            description: 'Basado en tu actividad reciente'
-        }" type="playlist" />
-        <app-music-card [item]="{
-            name: 'Mix Diario 2',
-            cover: 'https://picsum.photos/300',
-            description: 'Canciones recomendadas para ti'
-        }" type="playlist" />
-        <app-music-card [item]="{
-            name: 'Mix Diario 3',
-            cover: 'https://picsum.photos/300',
-            description: 'Descubre nueva música'
-        }" type="playlist" />
-    </div>
-</section>

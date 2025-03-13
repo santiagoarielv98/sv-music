@@ -1,24 +1,24 @@
-<mat-card class="music-card" [ngClass]="{'artist-card': type === 'artist'}">
-  <ng-container *ngIf="type === 'artist'">
+<mat-card class="music-card" [ngClass]="{'artist-card': type() === 'artist'}">
+  <ng-container *ngIf="type() === 'artist'">
     <div class="artist-image-container">
-      <img [src]="item.cover" [alt]="item.name" class="artist-image">
+      <img [src]="item().cover" [alt]="item().name" class="artist-image">
     </div>
   </ng-container>
   
-  <ng-container *ngIf="type !== 'artist'">
-    <img mat-card-image [src]="item.cover" [alt]="item.name" class="card-image">
+  <ng-container *ngIf="type() !== 'artist'">
+    <img mat-card-image [src]="item().cover" [alt]="item().name" class="card-image">
   </ng-container>
   
   <mat-card-content>
-    <h3 class="card-title">{{item.name}}</h3>
+    <h3 class="card-title">{{item().name}}</h3>
     <p class="card-description">
-      <ng-container *ngIf="type === 'playlist'">{{item.description}}</ng-container>
-      <ng-container *ngIf="type === 'album'">{{item.artist}}</ng-container>
-      <ng-container *ngIf="type === 'artist'">Artista</ng-container>
+      <ng-container *ngIf="type() === 'playlist'">{{item().description}}</ng-container>
+      <ng-container *ngIf="type() === 'album'">{{item().artist}}</ng-container>
+      <ng-container *ngIf="type() === 'artist'">Artista</ng-container>
     </p>
   </mat-card-content>
   
-  <mat-card-actions *ngIf="type !== 'artist'">
+  <mat-card-actions *ngIf="type() !== 'artist'">
     <button mat-icon-button aria-label="Play">
       <mat-icon>play_circle</mat-icon>
     </button>
