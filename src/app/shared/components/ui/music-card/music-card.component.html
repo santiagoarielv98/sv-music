@@ -1,13 +1,17 @@
 <mat-card class="music-card" [ngClass]="{'artist-card': type() === 'artist'}">
-    <ng-container *ngIf="type() === 'artist'">
+    <div class="music-image-container">
+        @if(type() === 'artist'){
         <div class="artist-image-container">
             <img [src]="item().cover" [alt]="item().name" class="artist-image">
         </div>
-    </ng-container>
+        }@else{
+        <img mat-card-image [src]="item().cover" [alt]="item().name" class="card-image">
+        }
+        <button mat-icon-button aria-label="Play" class="play-button">
+            <mat-icon>play_arrow</mat-icon>
+        </button>
+    </div>
 
-    @if(type() !== 'artist'){
-    <img mat-card-image [src]="item().cover" [alt]="item().name" class="card-image">
-    }
 
     <mat-card-content>
         <h3 class="card-title">{{item().name}}</h3>
@@ -24,9 +28,4 @@
         </p>
     </mat-card-content>
 
-    <mat-card-actions *ngIf="type() !== 'artist'">
-        <button mat-icon-button aria-label="Play">
-            <mat-icon>play_circle</mat-icon>
-        </button>
-    </mat-card-actions>
 </mat-card>
